@@ -1,0 +1,97 @@
+{
+  "@@locale": "en",
+
+  "appName": "Hagz Kora",
+  "@appName": { "description": "The application name." },
+
+  "continueButton": "Continue",
+  "cancelButton": "Cancel",
+  "saveButton": "Save",
+  "editButton": "Edit",
+  "deleteButton": "Delete",
+  "confirmButton": "Confirm",
+  "retryButton": "Retry",
+  "backButton": "Back",
+
+  "loading": "Loading…",
+  "errorGeneric": "Something went wrong. Please try again.",
+  "errorNetwork": "No internet connection.",
+  "errorUnauthorized": "Session expired. Please log in again.",
+  "errorNotFound": "The requested item was not found.",
+
+  "navHome": "Home",
+  "navSearch": "Search",
+  "navBookings": "Bookings",
+  "navTournaments": "Tournaments",
+  "navProfile": "Profile",
+
+  "authPhoneTitle": "Enter your phone number",
+  "authPhoneSubtitle": "We'll send you a verification code.",
+  "authPhonePlaceholder": "Phone number",
+  "authOtpTitle": "Verify your number",
+  "authOtpSubtitle": "Enter the 6-digit code sent to {phone}.",
+  "@authOtpSubtitle": {
+    "placeholders": {
+      "phone": { "type": "String" }
+    }
+  },
+  "authOtpResend": "Resend code",
+  "authOtpResendIn": "Resend in {seconds}s",
+  "@authOtpResendIn": {
+    "placeholders": {
+      "seconds": { "type": "int" }
+    }
+  },
+
+  "homeNearbyStadiums": "Nearby Stadiums",
+  "homePopularStadiums": "Popular",
+  "homeSeeAll": "See all",
+
+  "searchPlaceholder": "Search stadiums…",
+  "searchFilters": "Filters",
+  "searchNoResults": "No stadiums found.",
+
+  "stadiumBookNow": "Book Now",
+  "stadiumReviews": "{count} reviews",
+  "@stadiumReviews": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "stadiumOpen": "Open",
+  "stadiumClosed": "Closed",
+
+  "bookingSummaryTitle": "Booking Summary",
+  "bookingConfirmTitle": "Booking Confirmed!",
+  "bookingDateLabel": "Date",
+  "bookingTimeLabel": "Time",
+  "bookingDurationLabel": "Duration",
+  "bookingPriceLabel": "Price",
+  "bookingDepositNote": "Pay deposit in cash at the venue.",
+
+  "myBookingsTitle": "My Bookings",
+  "myBookingsEmpty": "You have no bookings yet.",
+  "bookingStatusUpcoming": "Upcoming",
+  "bookingStatusCompleted": "Completed",
+  "bookingStatusCancelled": "Cancelled",
+
+  "profileTitle": "My Profile",
+  "profileEditTitle": "Edit Profile",
+  "profileNameLabel": "Full name",
+  "profileLogout": "Log out",
+  "profileLogoutConfirm": "Are you sure you want to log out?",
+
+  "tournamentsTitle": "Tournaments",
+  "tournamentDetailsTitle": "Tournament Details",
+  "tournamentStandingsTitle": "Standings",
+  "tournamentMyTeamTitle": "My Team",
+  "tournamentRegisterTeam": "Register Team",
+  "tournamentJoinTeam": "Join Team",
+
+  "reviewsTitle": "Reviews",
+  "reviewLeaveTitle": "Leave a Review",
+  "reviewRatingLabel": "Rating",
+  "reviewCommentLabel": "Comment",
+  "reviewSubmit": "Submit Review",
+  "reviewEmpty": "No reviews yet."
+}

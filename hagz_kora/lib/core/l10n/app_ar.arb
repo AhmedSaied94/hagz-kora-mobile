@@ -1,0 +1,81 @@
+{
+  "@@locale": "ar",
+
+  "appName": "حجز كورة",
+
+  "continueButton": "متابعة",
+  "cancelButton": "إلغاء",
+  "saveButton": "حفظ",
+  "editButton": "تعديل",
+  "deleteButton": "حذف",
+  "confirmButton": "تأكيد",
+  "retryButton": "إعادة المحاولة",
+  "backButton": "رجوع",
+
+  "loading": "جاري التحميل…",
+  "errorGeneric": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+  "errorNetwork": "لا يوجد اتصال بالإنترنت.",
+  "errorUnauthorized": "انتهت الجلسة. يرجى تسجيل الدخول مجددًا.",
+  "errorNotFound": "العنصر المطلوب غير موجود.",
+
+  "navHome": "الرئيسية",
+  "navSearch": "البحث",
+  "navBookings": "حجوزاتي",
+  "navTournaments": "البطولات",
+  "navProfile": "الملف الشخصي",
+
+  "authPhoneTitle": "أدخل رقم هاتفك",
+  "authPhoneSubtitle": "سنرسل لك رمز التحقق.",
+  "authPhonePlaceholder": "رقم الهاتف",
+  "authOtpTitle": "تحقق من رقمك",
+  "authOtpSubtitle": "أدخل الرمز المكون من 6 أرقام المُرسَل إلى {phone}.",
+  "authOtpResend": "إعادة إرسال الرمز",
+  "authOtpResendIn": "إعادة الإرسال خلال {seconds}ث",
+
+  "homeNearbyStadiums": "ملاعب قريبة منك",
+  "homePopularStadiums": "الأكثر حجزًا",
+  "homeSeeAll": "عرض الكل",
+
+  "searchPlaceholder": "ابحث عن ملعب…",
+  "searchFilters": "تصفية",
+  "searchNoResults": "لا توجد ملاعب.",
+
+  "stadiumBookNow": "احجز الآن",
+  "stadiumReviews": "{count} تقييم",
+  "stadiumOpen": "مفتوح",
+  "stadiumClosed": "مغلق",
+
+  "bookingSummaryTitle": "ملخص الحجز",
+  "bookingConfirmTitle": "تم تأكيد الحجز!",
+  "bookingDateLabel": "التاريخ",
+  "bookingTimeLabel": "الوقت",
+  "bookingDurationLabel": "المدة",
+  "bookingPriceLabel": "السعر",
+  "bookingDepositNote": "ادفع العربون نقدًا في الملعب.",
+
+  "myBookingsTitle": "حجوزاتي",
+  "myBookingsEmpty": "لا توجد حجوزات بعد.",
+  "bookingStatusUpcoming": "قادم",
+  "bookingStatusCompleted": "مكتمل",
+  "bookingStatusCancelled": "ملغي",
+
+  "profileTitle": "ملفي الشخصي",
+  "profileEditTitle": "تعديل الملف",
+  "profileNameLabel": "الاسم الكامل",
+  "profileLogout": "تسجيل الخروج",
+  "profileLogoutConfirm": "هل أنت متأكد من تسجيل الخروج؟",
+
+  "tournamentsTitle": "البطولات",
+  "tournamentDetailsTitle": "تفاصيل البطولة",
+  "tournamentStandingsTitle": "الترتيب",
+  "tournamentMyTeamTitle": "فريقي",
+  "tournamentRegisterTeam": "تسجيل فريق",
+  "tournamentJoinTeam": "انضمام لفريق",
+
+  "reviewsTitle": "التقييمات",
+  "reviewLeaveTitle": "أضف تقييمًا",
+  "reviewRatingLabel": "التقييم",
+  "reviewCommentLabel": "التعليق",
+  "reviewSubmit": "إرسال التقييم",
+  "reviewEmpty": "لا توجد تقييمات بعد."
+}

@@ -1,0 +1,76 @@
+name: hagz_kora
+description: Egyptian football pitch booking — player mobile app
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+
+  # Navigation
+  go_router: ^14.6.3
+
+  # Networking
+  dio: ^5.8.0+1
+  retrofit: ">=4.4.1 <4.9.0" # retrofit_generator 9.7.0 doesn't handle Parser.DartMappable added in 4.9.x
+
+  # Serialization
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # Secure storage
+  flutter_secure_storage: ^9.2.4
+
+  # Local DB (caching)
+  hive_flutter: ^1.1.0
+
+  # Maps
+  google_maps_flutter: ^2.10.0
+
+  # Push notifications
+  firebase_messaging: ^15.2.5
+  firebase_core: ^3.13.0
+
+  # Image loading
+  cached_network_image: ^3.4.1
+
+  # Internationalization
+  intl: ^0.20.0
+
+  # Deep links
+  url_launcher: ^6.3.1
+
+  # Photo carousel
+  carousel_slider: ^5.0.0
+
+  # Utils
+  equatable: ^2.0.7
+  dartz: ^0.10.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.14
+  riverpod_generator: 2.6.4
+  retrofit_generator: ^9.1.8
+  freezed: ^2.5.8
+  json_serializable: ^6.9.5
+  flutter_lints: ^6.0.0
+  mocktail: ^1.0.4
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
