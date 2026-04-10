@@ -1,0 +1,65 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+concurrency:
+  # Cancel previous runs for the same PR; fall back to ref for branch pushes.
+  group: flutter-ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-and-test:
+    name: Lint & Test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hagz_kora
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.32.1"
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Check formatting
+        run: dart format --set-exit-if-changed lib test
+
+      - name: Analyze
+        run: flutter analyze --fatal-infos
+
+      - name: Run tests
+        run: flutter test --coverage --reporter=expanded
+
+      - name: Enforce 80% coverage threshold
+        run: |
+          sudo apt-get install -y --no-install-recommends lcov
+          lcov --summary coverage/lcov.info | awk '
+            /lines/ {
+              split($2, a, "%");
+              if (a[1]+0 < 80) {
+                print "Coverage " a[1] "% is below the 80% minimum.";
+                exit 1
+              }
+              print "Coverage " a[1] "% meets the 80% minimum."
+            }'
+
+      - name: Upload coverage
+        uses: codecov/codecov-action@v4
+        if: ${{ !cancelled() }}
+        with:
+          # Path is repo-relative (not working-directory-relative).
+          files: hagz_kora/coverage/lcov.info
+          flags: flutter
+          fail_ci_if_error: false

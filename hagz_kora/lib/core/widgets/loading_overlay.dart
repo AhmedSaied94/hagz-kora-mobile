@@ -30,13 +30,19 @@ class LoadingOverlay extends StatelessWidget {
       children: [
         child,
         if (isLoading)
-          const ModalBarrier(dismissible: false, color: Colors.transparent),
-        if (isLoading)
-          ColoredBox(
-            color: Colors.black.withValues(alpha: 0.3),
-            child: Center(
-              child: _SpinnerCard(label: label),
+          Positioned.fill(
+            child: ColoredBox(
+              color: const Color(0x4D000000), // ~30% black scrim
+              child: Center(
+                child: _SpinnerCard(label: label),
+              ),
             ),
+          ),
+        // ModalBarrier must be the topmost child so it owns the hit-test
+        // surface and blocks all interaction with the content below.
+        if (isLoading)
+          const Positioned.fill(
+            child: ModalBarrier(dismissible: false, color: Colors.transparent),
           ),
       ],
     );

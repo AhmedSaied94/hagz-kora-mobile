@@ -7,11 +7,13 @@ import 'package:hagz_kora/core/config/app_config.dart';
 void main() {
   setUpAll(() => AppConfig.setup(AppConfig.development));
 
-  testWidgets('app smoke test — renders without crashing',
+  testWidgets('app smoke test — renders MaterialApp without crashing',
       (WidgetTester tester) async {
     await tester.pumpWidget(const ProviderScope(child: HagzKoraApp()));
-    // Router redirects unauthenticated users to auth — just verify no crash.
-    expect(find.byType(MaterialApp), findsNothing); // MaterialApp.router used
-    expect(find.byType(Router<Object>), findsOneWidget);
+    await tester.pump();
+
+    // MaterialApp.router is a named constructor of MaterialApp, not a subtype,
+    // so byType(MaterialApp) correctly finds exactly one widget.
+    expect(find.byType(MaterialApp), findsOneWidget);
   });
 }
