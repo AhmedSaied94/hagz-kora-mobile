@@ -21,7 +21,10 @@ class AppConfig {
   static AppConfig? _instance;
 
   static AppConfig get instance {
-    assert(_instance != null, 'AppConfig not initialized. Call AppConfig.setup() first.');
+    assert(
+      _instance != null,
+      'AppConfig not initialized. Call AppConfig.setup() first.',
+    );
     return _instance!;
   }
 

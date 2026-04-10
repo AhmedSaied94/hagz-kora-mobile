@@ -7,11 +7,9 @@ import 'package:hagz_kora/core/storage/secure_storage.dart';
 /// stores new tokens → retries original request once.
 /// On refresh failure: clears tokens and rethrows so callers can redirect to auth.
 class AuthInterceptor extends Interceptor {
-  AuthInterceptor({
-    required Dio dio,
-    required SecureStorage storage,
-  })  : _dio = dio,
-        _storage = storage;
+  AuthInterceptor({required Dio dio, required SecureStorage storage})
+    : _dio = dio,
+      _storage = storage;
 
   final Dio _dio;
   final SecureStorage _storage;

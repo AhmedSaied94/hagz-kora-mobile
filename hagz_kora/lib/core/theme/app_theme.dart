@@ -137,8 +137,10 @@ abstract final class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.surfaceVariant,
-        contentPadding:
-            const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 14,
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: AppColors.border),
@@ -159,12 +161,13 @@ abstract final class AppTheme {
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: AppColors.error, width: 2),
         ),
-        labelStyle: AppTextStyles.bodyMedium
-            .copyWith(color: AppColors.textSecondary),
-        hintStyle:
-            AppTextStyles.bodyMedium.copyWith(color: AppColors.textDisabled),
-        errorStyle:
-            AppTextStyles.bodySmall.copyWith(color: AppColors.error),
+        labelStyle: AppTextStyles.bodyMedium.copyWith(
+          color: AppColors.textSecondary,
+        ),
+        hintStyle: AppTextStyles.bodyMedium.copyWith(
+          color: AppColors.textDisabled,
+        ),
+        errorStyle: AppTextStyles.bodySmall.copyWith(color: AppColors.error),
       ),
 
       // Card

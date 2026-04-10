@@ -18,7 +18,7 @@ final class NetworkFailure extends Failure {
 /// Server returned a non-2xx status.
 final class ServerFailure extends Failure {
   const ServerFailure({required String message, this.statusCode})
-      : super(message);
+    : super(message);
 
   final int? statusCode;
 
@@ -28,12 +28,16 @@ final class ServerFailure extends Failure {
 
 /// 401 — access token expired or invalid; refresh also failed.
 final class UnauthorizedFailure extends Failure {
-  const UnauthorizedFailure([super.message = 'Session expired. Please log in again.']);
+  const UnauthorizedFailure([
+    super.message = 'Session expired. Please log in again.',
+  ]);
 }
 
 /// 404 — requested resource not found.
 final class NotFoundFailure extends Failure {
-  const NotFoundFailure([super.message = 'The requested resource was not found.']);
+  const NotFoundFailure([
+    super.message = 'The requested resource was not found.',
+  ]);
 }
 
 /// 422 / 400 — validation error with field-level details.

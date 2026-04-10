@@ -30,7 +30,8 @@ class ErrorHandler {
         return const UnexpectedFailure('SSL certificate error.');
 
       case DioExceptionType.unknown:
-        if (error.error != null && error.error.toString().contains('SocketException')) {
+        if (error.error != null &&
+            error.error.toString().contains('SocketException')) {
           return const NetworkFailure();
         }
         return const UnexpectedFailure();
@@ -79,11 +80,9 @@ class ErrorHandler {
 
   static Map<String, List<String>> _extractFieldErrors(dynamic data) {
     if (data is! Map<String, dynamic>) return {};
-    return data.entries
-        .where((e) => e.value is List)
-        .fold({}, (acc, e) {
-          acc[e.key] = (e.value as List).map((v) => v.toString()).toList();
-          return acc;
-        });
+    return data.entries.where((e) => e.value is List).fold({}, (acc, e) {
+      acc[e.key] = (e.value as List).map((v) => v.toString()).toList();
+      return acc;
+    });
   }
 }

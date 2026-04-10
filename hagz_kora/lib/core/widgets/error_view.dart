@@ -37,16 +37,14 @@ class ErrorView extends StatelessWidget {
             const SizedBox(height: 16),
             Text(
               message,
-              style: theme.textTheme.bodyLarge
-                  ?.copyWith(color: AppColors.textSecondary),
+              style: theme.textTheme.bodyLarge?.copyWith(
+                color: AppColors.textSecondary,
+              ),
               textAlign: TextAlign.center,
             ),
             if (onRetry != null) ...[
               const SizedBox(height: 24),
-              AppButton(
-                label: 'Try Again',
-                onPressed: onRetry,
-              ),
+              AppButton(label: 'Try Again', onPressed: onRetry),
             ],
           ],
         ),
@@ -78,10 +76,9 @@ class ErrorBanner extends StatelessWidget {
           Expanded(
             child: Text(
               message,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodySmall
-                  ?.copyWith(color: AppColors.error),
+              style: Theme.of(
+                context,
+              ).textTheme.bodySmall?.copyWith(color: AppColors.error),
             ),
           ),
         ],

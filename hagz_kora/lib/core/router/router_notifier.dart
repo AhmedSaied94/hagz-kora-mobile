@@ -35,7 +35,8 @@ class RouterNotifier extends _$RouterNotifier implements ChangeNotifier {
 
   String? redirect(GoRouterState state) {
     final location = state.matchedLocation;
-    final isOnAuth = location.startsWith('/auth') || location == AppRoutes.splash;
+    final isOnAuth =
+        location.startsWith('/auth') || location == AppRoutes.splash;
 
     if (!_isAuthenticated && !isOnAuth) {
       return AppRoutes.authPhone;

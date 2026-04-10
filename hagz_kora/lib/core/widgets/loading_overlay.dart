@@ -33,9 +33,7 @@ class LoadingOverlay extends StatelessWidget {
           Positioned.fill(
             child: ColoredBox(
               color: const Color(0x4D000000), // ~30% black scrim
-              child: Center(
-                child: _SpinnerCard(label: label),
-              ),
+              child: Center(child: _SpinnerCard(label: label)),
             ),
           ),
         // ModalBarrier must be the topmost child so it owns the hit-test
@@ -80,10 +78,9 @@ class _SpinnerCard extends StatelessWidget {
             const SizedBox(height: 16),
             Text(
               label!,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium
-                  ?.copyWith(color: AppColors.textSecondary),
+              style: Theme.of(
+                context,
+              ).textTheme.bodyMedium?.copyWith(color: AppColors.textSecondary),
               textAlign: TextAlign.center,
             ),
           ],

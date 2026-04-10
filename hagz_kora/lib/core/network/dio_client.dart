@@ -12,7 +12,10 @@ class DioClient {
   static DioClient? _instance;
 
   static DioClient get instance {
-    assert(_instance != null, 'DioClient.initialize() must be called before use.');
+    assert(
+      _instance != null,
+      'DioClient.initialize() must be called before use.',
+    );
     return _instance!;
   }
 

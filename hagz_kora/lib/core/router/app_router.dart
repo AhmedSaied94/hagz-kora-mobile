@@ -19,8 +19,7 @@ GoRouter appRouter(Ref ref) {
     routes: [
       GoRoute(
         path: AppRoutes.splash,
-        builder: (context, state) =>
-            const PlaceholderScreen(label: 'Splash'),
+        builder: (context, state) => const PlaceholderScreen(label: 'Splash'),
       ),
       GoRoute(
         path: AppRoutes.onboarding,
@@ -135,11 +134,36 @@ class _AppShell extends StatelessWidget {
   final Widget child;
 
   static const _tabs = [
-    (icon: Icons.home_outlined, activeIcon: Icons.home, label: 'Home', path: AppRoutes.homeFeed),
-    (icon: Icons.search_outlined, activeIcon: Icons.search, label: 'Search', path: AppRoutes.search),
-    (icon: Icons.calendar_today_outlined, activeIcon: Icons.calendar_today, label: 'Bookings', path: AppRoutes.myBookings),
-    (icon: Icons.emoji_events_outlined, activeIcon: Icons.emoji_events, label: 'Tournaments', path: AppRoutes.tournaments),
-    (icon: Icons.person_outline, activeIcon: Icons.person, label: 'Profile', path: AppRoutes.profile),
+    (
+      icon: Icons.home_outlined,
+      activeIcon: Icons.home,
+      label: 'Home',
+      path: AppRoutes.homeFeed,
+    ),
+    (
+      icon: Icons.search_outlined,
+      activeIcon: Icons.search,
+      label: 'Search',
+      path: AppRoutes.search,
+    ),
+    (
+      icon: Icons.calendar_today_outlined,
+      activeIcon: Icons.calendar_today,
+      label: 'Bookings',
+      path: AppRoutes.myBookings,
+    ),
+    (
+      icon: Icons.emoji_events_outlined,
+      activeIcon: Icons.emoji_events,
+      label: 'Tournaments',
+      path: AppRoutes.tournaments,
+    ),
+    (
+      icon: Icons.person_outline,
+      activeIcon: Icons.person,
+      label: 'Profile',
+      path: AppRoutes.profile,
+    ),
   ];
 
   @override
